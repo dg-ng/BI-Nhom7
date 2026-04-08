@@ -32,14 +32,12 @@ Dự án xây dựng một hệ thống **Business Intelligence** toàn diện c
 ## 🗂️ Cấu trúc thư mục
 
 ```
-├── preprocess BI.ipynb                     # ETL & tiền xử lý dữ liệu
-├── model/
+├── preprocess+model/
 │   ├── RFM.ipynb                           # Mô hình phân khúc RFM
 │   ├── BI-CLV.ipynb                        # Mô hình dự báo CLV (XGBoost + K-Means + PCA)
 │   └── Churn Analysis & Prediction.ipynb  # Mô hình dự đoán Behavioral Decline (Logistic Regression)
-├── my-dashboard/                           # Source code Plotly Dash dashboard
-│   └── app.py                             # Entry point chạy dashboard
-├── data/                                   # Thư mục chứa dữ liệu (xem hướng dẫn bên dưới)
+│   └── preprocess BI.ipynb                 # ETL & tiền xử lý dữ liệu
+├── my-dashboard                           # Source code Plotly Dash dashboard
 ├── Financial Transactions.rar              # Dữ liệu gốc (giải nén vào data/)
 └── README.md
 ```
@@ -80,31 +78,7 @@ cd <repo-name>
 ### Bước 2 – Cài đặt thư viện
 
 ```bash
-pip install -r requirements.txt
-```
-
-Hoặc cài thủ công:
-
-```bash
 pip install pandas numpy scikit-learn xgboost imbalanced-learn plotly dash dash-bootstrap-components scipy matplotlib seaborn joblib jupyter
-```
-
-**`requirements.txt`:**
-
-```
-pandas>=1.5.0
-numpy>=1.23.0
-scikit-learn>=1.1.0
-xgboost>=1.7.0
-imbalanced-learn>=0.10.0
-plotly>=5.13.0
-dash>=2.8.0
-dash-bootstrap-components>=1.3.0
-scipy>=1.9.0
-matplotlib>=3.6.0
-seaborn>=0.12.0
-joblib>=1.2.0
-jupyter>=1.0.0
 ```
 
 ---
@@ -131,7 +105,6 @@ Chạy notebook `preprocess BI.ipynb` để sinh ra file `preprocess_data.csv`:
 jupyter notebook "preprocess BI.ipynb"
 ```
 
-> ⚠️ Bước này **bắt buộc phải chạy trước** khi chạy các model và dashboard.
 
 ---
 
@@ -218,6 +191,3 @@ Phase 5 – Visualization
 
 ---
 
-## 📄 Báo cáo
-
-Xem báo cáo chi tiết: [`BÁO_CÁO.pdf`](./BÁO_CÁO.pdf)
