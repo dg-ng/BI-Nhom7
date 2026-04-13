@@ -14,7 +14,7 @@
 | Nguyễn Đỗ Nhật Minh | 31231020749 |
 | Dương Phương Anh | 31231021067 |
 | Tăng Gia Hoàng | 31231021890 |
-| Nguyên Lợi Thanh Dũng | 312310211226 |
+| Nguyên Lợi Thanh Dũng | 31231021226 |
 
 ---
 
